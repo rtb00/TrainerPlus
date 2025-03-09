@@ -1,7 +1,7 @@
 class Membership {
-  final int id;
-  final int trainingGroupId;
-  final int personId;
+  final String id;
+  final String trainingGroupId;
+  final String personId;
   final DateTime createdAt;
   final DateTime deletedAt;
 
