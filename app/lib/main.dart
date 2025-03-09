@@ -1,9 +1,18 @@
+// Openapi Generator last run: : 2025-03-09T16:45:15.647062
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
+// @Openapi(
+//   additionalProperties:
+//       DioProperties(pubName: 'trainer_plus_api', pubAuthor: 'Robin Bauer'),
+//   inputSpec: InputSpec(path: 'lib/core/api/openapi.yaml'),
+//   generatorName: Generator.dio,
+//   runSourceGenOnOutput: true,
+//   outputDirectory: 'lib/core/api/',
+// )
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
