@@ -1,6 +1,6 @@
 import 'package:openapi/api.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:trainer_plus/features/exercise/data/exercise_dto.dart';
+import 'package:trainer_plus/features/exercise/data/exercise_api_extension.dart';
 import 'package:trainer_plus/features/exercise/domain/entity/exercise.dart';
 import 'package:trainer_plus/features/exercise/domain/repository/exercise_repository.dart';
 

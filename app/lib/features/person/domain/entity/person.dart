@@ -1,7 +1,7 @@
 class Person {
-  final int id;
+  final String id;
   final String name;
-  final DateTime birthday;
+  final DateTime? birthday;
 
   Person({
     required this.id,

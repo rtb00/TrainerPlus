@@ -8,25 +8,28 @@ abstract class PersonRepository {
 
   Future<List<Person>> getPersons();
 
-  Future<Person> getPerson(int personId);
+  Future<Person> getPerson(String personId);
 
-  Future<void> updatePersonName({required int personId, required String name});
+  Future<void> updatePersonName(
+      {required String personId, required String name});
 
   Future<void> updatePersonBirthDay(
-      {required int personId, required DateTime birthday});
+      {required String personId, required DateTime birthday});
 
-  Future<void> removePerson(int personId);
+  Future<void> removePerson(String personId);
 
   // PersonSportSkill
   Future<void> createPersonSportSkill(
-      {required int personId, required int sportTypeId, required int value});
+      {required String personId,
+      required String sportTypeId,
+      required int value});
 
   Future<List<PersonSportSkill>> getSportSkills();
 
-  Future<List<PersonSportSkill>> getSportSkillsOfPerson(int personId);
+  Future<List<PersonSportSkill>> getSportSkillsOfPerson(String personId);
 
   Future<void> updatePersonSportSkillValue(
-      {required int personSportSkillId, required int value});
+      {required String personSportSkillId, required int value});
 
-  Future<void> removePersonSportSkill(int personSportSkillId);
+  Future<void> removePersonSportSkill(String personSportSkillId);
 }

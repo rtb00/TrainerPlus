@@ -14,6 +14,4 @@ extension ExerciseAPIExtension on ExerciseAPI {
         maxDuration: maxDuration,
         tags: tags,
       );
-
-  Map<String, dynamic> insert() => toJson()..remove('id');
 }

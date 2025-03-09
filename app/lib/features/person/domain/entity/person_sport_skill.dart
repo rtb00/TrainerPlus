@@ -1,8 +1,8 @@
 class PersonSportSkill {
-  final int id;
-  final int value;
-  final int personId;
-  final int sportTypeId;
+  final String id;
+  final int? value;
+  final String personId;
+  final String sportTypeId;
   final DateTime createdAt;
 
   PersonSportSkill({
