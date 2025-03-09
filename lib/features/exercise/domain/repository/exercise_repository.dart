@@ -8,6 +8,7 @@ abstract class ExerciseRepository {
     required int sporttypeId,
     required int? minDuration,
     required int? maxDuration,
+    required List<String> tags,
   });
 
   Future<List<Exercise>> getMatchingExercises({
@@ -44,6 +45,11 @@ abstract class ExerciseRepository {
   Future<void> updateExerciseMaxDuration({
     required int exerciseId,
     required int maxDuration,
+  });
+
+  Future<void> updateExerciseTags({
+    required int exerciseId,
+    required List<String> tags,
   });
 
   Future<void> removeExercise({

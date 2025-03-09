@@ -8,6 +8,7 @@ class Exercise {
   final int sporttypeId;
   final int? minDuration;
   final int? maxDuration;
+  final List<String> tags;
 
   Exercise({
     required this.id,
@@ -19,5 +20,6 @@ class Exercise {
     required this.sporttypeId,
     required this.minDuration,
     required this.maxDuration,
+    required this.tags,
   });
 }
