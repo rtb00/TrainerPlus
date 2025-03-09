@@ -16,14 +16,6 @@ void main() async {
   runApp(const MyApp());
 }
 
-// @Openapi(
-//   additionalProperties:
-//       DioProperties(pubName: 'trainer_plus_api', pubAuthor: 'Robin Bauer'),
-//   inputSpec: InputSpec(path: 'lib/core/api/openapi.yaml'),
-//   generatorName: Generator.dio,
-//   runSourceGenOnOutput: true,
-//   outputDirectory: 'lib/core/api/',
-// )
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -31,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'TrainerPlus',
       theme: ThemeData(
         // This is the theme of your application.
         //
