@@ -21,6 +21,8 @@ abstract class PersonRepository {
   Future<void> createPersonSportSkill(
       {required int personId, required int sportTypeId, required int value});
 
+  Future<List<PersonSportSkill>> getSportSkills();
+
   Future<List<PersonSportSkill>> getSportSkillsOfPerson(int personId);
 
   Future<void> updatePersonSportSkillValue(

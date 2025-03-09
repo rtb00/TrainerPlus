@@ -5,17 +5,13 @@ abstract class ExerciseRepository {
     required String name,
     required String description,
     required List<int> numberParticipants,
-    required int sporttypeId,
+    required String sporttypeId,
     required int? minDuration,
     required int? maxDuration,
     required List<String> tags,
   });
 
-  Future<List<Exercise>> getMatchingExercises({
-    required List<int> attendeeIds,
-  });
-
-  Future<List<Exercise>> getExercises();
+  Stream<Exercise> getExercises();
 
   Future<void> updateExerciseName({
     required int exerciseId,
@@ -29,7 +25,7 @@ abstract class ExerciseRepository {
 
   Future<void> updateExerciseNumberParticipants({
     required int exerciseId,
-    required List<int> numberParticipants,
+    required Iterable<int> numberParticipants,
   });
 
   Future<void> updateExerciseSporttypeId({
@@ -49,7 +45,7 @@ abstract class ExerciseRepository {
 
   Future<void> updateExerciseTags({
     required int exerciseId,
-    required List<String> tags,
+    required Iterable<String> tags,
   });
 
   Future<void> removeExercise({

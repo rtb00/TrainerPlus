@@ -1,11 +1,11 @@
 class Exercise {
-  final int id;
-  final String name;
-  final String description;
-  final int difficulty;
+  final String id;
+  final String? name;
+  final String? description;
+  final int? difficulty;
   final List<int> numberParticipants;
   final DateTime createdAt;
-  final int sporttypeId;
+  final String sporttypeId;
   final int? minDuration;
   final int? maxDuration;
   final List<String> tags;
