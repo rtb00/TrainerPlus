@@ -1,0 +1,62 @@
+@startuml
+class Trainingssession {
+    - id (PK)
+    - date
+}
+class Person {
+    - id (PK)
+    - name
+    - birthday
+}
+class Group {
+    - id (PK)
+    - name
+}
+class SkillLevel {
+    - id (PK)
+    - Person_id (FK)
+    - Sport_id (FK)
+    - Value
+    - createdAt
+}
+class Sport {
+    - id (PK)
+    - name
+}
+class Exercise {
+    - id (PK)
+    - Sport_id (FK)
+    - name
+    - description
+    - numberParticipants: List<int>
+}
+class TrainingDate {
+    - id (PK)
+    - Group_id (FK)
+    - date
+    - createdAt
+}
+class Group_Person {
+    - Group_id (FK)
+    - Person_id (FK)
+}
+class Trainingssession_Exercise {
+    - Trainingssession_id (FK)
+    - Exercise_id (FK)
+}
+class Trainingssession_Person {
+    - Trainingssession_id (FK)
+    - Person_id (FK)
+}
+
+Trainingssession "1" -- "n" Trainingssession_Exercise : includes
+Exercise "1" -- "n" Trainingssession_Exercise : includes
+Person "1" -- "n" SkillLevel : has
+Group "1" -- "n" TrainingDate : has
+Group "1" -- "n" Group_Person : has
+Person "1" -- "n" Group_Person : is member of
+SkillLevel "n" -- "1" Sport : is in
+Trainingssession_Person "n" -- "1" Person : has
+Trainingssession_Person "n" -- "1" Trainingssession : has
+Exercise "n" -- "1" Sport
+@enduml
